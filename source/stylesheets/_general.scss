@@ -1,0 +1,105 @@
+p.responsive-debug {
+  position: fixed;
+  bottom: -20px;
+  right: 0;
+  color: black;
+  background: white;
+  font-size: 12px;
+  opacity: .8;
+  padding: 5px;
+
+  input {
+    text-align: right;
+    font-weight: bold;
+    color: #222;
+    border: none;
+    width: 45px;
+    margin: 0 5px;
+    display: inline;
+  }
+}
+
+
+
+.dimmed {
+  color: #aaa;
+}
+
+.top-bar > ul .name img {
+ margin-top: -4px;
+}
+
+footer {
+  margin-top: 100px;
+  padding-top: 20px !important;
+  text-align: center;
+  border-top: 1px solid #efefef;
+
+  a {
+    color: #999;
+
+    &:hover {
+      color: #666;
+    }
+  }
+}
+
+.scoreboard {
+  table {
+    border: none;
+    width: 100%;
+
+
+    th {
+      text-align: left;
+      padding: 0 10px 5px;
+    }
+
+    td {
+      vertical-align: middle;
+      margin: 0;
+
+      &.name {
+        a {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .image {
+      text-align: right;
+
+
+      img {
+        height: 27px;
+        width: 27px;
+      }
+
+      @media(max-width: 980px){
+        display: none;
+
+      }
+    }
+
+    .ratio {
+      @media(max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.match {
+    .versus {
+      text-align: center;
+      h4 {
+        margin-top: 73px;
+        color: #ddd;
+      }
+    }
+
+    a.submit-match {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }

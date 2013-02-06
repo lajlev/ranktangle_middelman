@@ -1,0 +1,29 @@
+---
+title: Home
+---
+
+.row.scoreboard
+  .twelve.columns
+    h1 Scoreboard
+    table cellspacing="0"
+      tr
+        th Rank
+        th.image
+        th Name
+        th Points
+        th.ratio Winning ratio
+      - 60.times do |num|
+        tr
+          td.rank
+            #{num+1}
+          td.image
+            a href="/profile.html"
+              == image_tag lorem.image('54x54', :random_color => true, :text => ' ')
+          td.name
+            a href="/profile.html"
+              == lorem.name
+          td.score
+            == random_number(800, 1999)
+          td.ratio
+            == random_number(9, 99)
+            | %

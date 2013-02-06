@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    meta content="noindex" name="robots"
+
+    title = data.page.title || "Ranktangle"
+
+    == stylesheet_link_tag "app"
+
+  body class="#{page_classes}"
+
+  .contain-to-grid
+    nav.top-bar
+      ul
+        li.name
+          a href="/"
+            img.logo height="23" width="83" src="/images/ranktangle-logo.png"
+
+        li.toggle-topbar
+          a href="#"
+
+      section
+        ul.left
+          li: a href="/match.html" Submit result
+          li: a href="/scoreboard.html" Scoreboard
+          li: a href="/statistics.html" Statistics
+
+        ul.right
+          li: a href="settings.html" My settings
+          li: a href="#" Logout
+
+  section.content
+    == yield
+
+  .row
+    footer.twelve.columns.dimmed
+      | RankTangle is a simple scoreboard for 1-2 players sports and games. Create your own <a href="http://ranktangle.com/liga/new"> ), see latest [features](http://ranktangle.com/features) or post an [idea](https://foosball.uservoice.com/forums/182242-general) on how Ranktangle can become even better.
+
+  p.responsive-debug
+    input type="text" id="win-width" name="win-width"
+    | x
+    input type="text" id="win-height" name="win-height"
+
+  == javascript_include_tag "all"
