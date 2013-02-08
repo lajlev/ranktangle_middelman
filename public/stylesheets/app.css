@@ -4924,66 +4924,122 @@ p.responsive-debug {
     margin: 0 5px;
     display: inline; }
 
-/* line 24, _general.scss */
+/* line 22, _general.scss */
+a.has-tip {
+  color: #2ba6cb;
+  border: none; }
+  /* line 25, _general.scss */
+  a.has-tip:hover {
+    border: none; }
+
+/* line 30, _general.scss */
 .dimmed {
   color: #aaa; }
 
-/* line 28, _general.scss */
+/* line 35, _general.scss */
 .top-bar > ul .name img {
-  margin-top: -4px; }
+  opacity: .4; }
+@media (min-width: 940px) {
+  /* line 40, _general.scss */
+  .top-bar > ul .name img {
+    margin-top: -4px;
+    opacity: .2;
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    -ms-transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear; }
+    /* line 45, _general.scss */
+    .top-bar > ul .name img:hover {
+      opacity: 1;
+      -webkit-transition: opacity 0.25s linear;
+      -moz-transition: opacity 0.25s linear;
+      -ms-transition: opacity 0.25s linear;
+      -o-transition: opacity 0.25s linear;
+      transition: opacity 0.25s linear; } }
+/* line 52, _general.scss */
+.top-bar > ul .name span {
+  margin-left: 10px; }
+  @media (min-width: 420px) {
+    /* line 52, _general.scss */
+    .top-bar > ul .name span {
+      margin-left: 20px;
+      font-size: 16px; } }
 
-/* line 32, _general.scss */
+/* line 62, _general.scss */
+h1 {
+  margin-top: 28px;
+  margin-bottom: 28px; }
+
+/* line 67, _general.scss */
 footer {
   margin-top: 100px;
   padding-top: 20px !important;
   text-align: center;
   border-top: 1px solid #efefef; }
-  /* line 38, _general.scss */
+  /* line 73, _general.scss */
   footer a {
     color: #999; }
-    /* line 41, _general.scss */
+    /* line 76, _general.scss */
     footer a:hover {
       color: #666; }
 
-/* line 48, _general.scss */
-.scoreboard table {
+/* line 83, _general.scss */
+.tables table {
   border: none;
   width: 100%; }
-  /* line 53, _general.scss */
-  .scoreboard table th {
+  /* line 88, _general.scss */
+  .tables table tr th {
     text-align: left;
-    padding: 0 10px 5px; }
-  /* line 58, _general.scss */
-  .scoreboard table td {
+    padding: 0 10px 5px;
+    text-align: center; }
+  /* line 94, _general.scss */
+  .tables table tr td {
     vertical-align: middle;
-    margin: 0; }
-    /* line 63, _general.scss */
-    .scoreboard table td.name a {
+    margin: 0;
+    text-align: center; }
+  /* line 100, _general.scss */
+  .tables table tr .name {
+    text-align: left; }
+    /* line 103, _general.scss */
+    .tables table tr .name a {
       font-weight: bold; }
-  /* line 69, _general.scss */
-  .scoreboard table .image {
+  /* line 108, _general.scss */
+  .tables table tr .image {
     text-align: right; }
-    /* line 73, _general.scss */
-    .scoreboard table .image img {
+    /* line 112, _general.scss */
+    .tables table tr .image img {
       height: 27px;
       width: 27px; }
-    @media (max-width: 980px) {
-      /* line 69, _general.scss */
-      .scoreboard table .image {
+    @media (max-width: 420px) {
+      /* line 108, _general.scss */
+      .tables table tr .image {
         display: none; } }
+  @media (max-width: 840px) {
+    /* line 123, _general.scss */
+    .tables table tr .last-match {
+      display: none; } }
   @media (max-width: 480px) {
-    /* line 84, _general.scss */
-    .scoreboard table .ratio {
+    /* line 129, _general.scss */
+    .tables table tr .ratio {
+      display: none; } }
+  @media (max-width: 520px) {
+    /* line 135, _general.scss */
+    .tables table tr .won, .tables table tr .lost {
+      display: none; } }
+  @media (max-width: 320px) {
+    /* line 141, _general.scss */
+    .tables table tr .matches {
       display: none; } }
 
-/* line 93, _general.scss */
+/* line 151, _general.scss */
 .match .versus {
   text-align: center; }
-  /* line 95, _general.scss */
+  /* line 153, _general.scss */
   .match .versus h4 {
     margin-top: 73px;
     color: #ddd; }
-/* line 101, _general.scss */
+/* line 159, _general.scss */
 .match a.submit-match {
   width: 100%;
   margin-top: 15px; }

@@ -4,6 +4,9 @@ GEM
     activesupport (3.2.11)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    bourbon (3.0.1)
+      sass (>= 3.2.0)
+      thor
     chunky_png (1.2.7)
     coffee-script (2.2.0)
       coffee-script-source
@@ -35,6 +38,8 @@ GEM
       middleman-core (= 3.0.11)
       middleman-more (= 3.0.11)
       middleman-sprockets (~> 3.0.6)
+    middleman-bourbon (0.0.2)
+      bourbon (>= 2.1.0)
     middleman-core (3.0.11)
       activesupport (~> 3.2.6)
       bundler (~> 1.1)
@@ -129,6 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (~> 3.0.9)
+  middleman-bourbon
   middleman-livereload
   slim
   zurb-foundation (~> 3.2.0)

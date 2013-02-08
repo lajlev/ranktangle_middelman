@@ -1,5 +1,6 @@
 require "zurb-foundation"
 
+activate :bourbon
 ###
 # Compass
 ###
@@ -66,6 +67,22 @@ helpers do
   def random_number(from_num, to_num)
     rand(from_num..to_num)
   end
+
+  # == random_number(7, 129)
+  def random_number_alt(from_num, to_num)
+    rand(from_num..to_num).to_s.rjust(2, '0')
+  end
+
+  # Prepend 0 to number if below 10
+  def prepend_zero(num)
+    num.to_s.rjust(2, '0')
+  end
+
+  # == random_time
+  def random_time
+    Time.at(rand * Time.now.to_i)
+  end
+
 end
 
 # Set slim-lang output style

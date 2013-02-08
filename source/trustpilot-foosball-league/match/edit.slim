@@ -1,0 +1,52 @@
+---
+title: Home
+---
+
+.row.match
+  .twelve.columns
+    h1 Match Result
+
+form.row.custom
+  .five.columns
+    h4 Winners
+    .custom.dropdown
+      a.current href="#" Player 1
+      a.selector href="#"
+      ul
+        - 40.times do
+          li
+            == lorem.name
+
+    .custom.dropdown
+      a.current href="#" Player 2
+      a.selector href="#"
+      ul
+        - 40.times do
+          li
+            == lorem.name
+  .versus.two.columns.hide-for-small
+    h4 VERSUS
+
+  .five.columns
+    h4 Loosers
+    .custom.dropdown
+      a.current href="#" Player 1
+      a.selector href="#"
+      ul
+        - 40.times do
+          li
+            == lorem.name
+
+    .custom.dropdown
+      a.current href="#" Player 2
+      a.selector href="#"
+      ul
+        - 40.times do
+          li
+            == lorem.name
+
+  .offset-by-three.six.columns.end
+    a.button.radius.success.submit-match href="#" Submit Match Result
+
+
+

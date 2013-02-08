@@ -19,14 +19,49 @@ p.responsive-debug {
   }
 }
 
-
+a.has-tip {
+  color: #2ba6cb;
+  border: none;
+  &:hover {
+    border: none;
+  }
+}
 
 .dimmed {
   color: #aaa;
 }
 
-.top-bar > ul .name img {
- margin-top: -4px;
+.top-bar > ul .name {
+  img {
+    opacity: .4;
+  }
+
+  @media(min-width: 940px) {
+    img {
+      margin-top: -4px;
+      opacity: .2;
+      @include transition (opacity .25s linear);
+
+      &:hover {
+        opacity: 1;
+        @include transition (opacity .25s linear);
+      }
+    }
+  }
+
+  span {
+    margin-left: 10px;
+
+    @media(min-width: 420px) {
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  }
+}
+
+h1 {
+  margin-top: 28px;
+  margin-bottom: 28px;
 }
 
 footer {
@@ -44,47 +79,70 @@ footer {
   }
 }
 
-.scoreboard {
+.tables {
   table {
     border: none;
     width: 100%;
 
+    tr {
+      th {
+        text-align: left;
+        padding: 0 10px 5px;
+        text-align: center;
+      }
 
-    th {
-      text-align: left;
-      padding: 0 10px 5px;
-    }
+      td {
+        vertical-align: middle;
+        margin: 0;
+        text-align: center;
+      }
 
-    td {
-      vertical-align: middle;
-      margin: 0;
+      .name {
+        text-align: left;
 
-      &.name {
         a {
           font-weight: bold;
         }
       }
-    }
 
-    .image {
-      text-align: right;
+      .image {
+        text-align: right;
 
 
-      img {
-        height: 27px;
-        width: 27px;
+        img {
+          height: 27px;
+          width: 27px;
+        }
+
+        @media(max-width: 420px){
+          display: none;
+        }
       }
 
-      @media(max-width: 980px){
-        display: none;
-
+      @media(max-width: 840px){
+        .last-match {
+          display: none;
+        }
       }
-    }
 
-    .ratio {
       @media(max-width: 480px) {
-        display: none;
+        .ratio {
+          display: none;
+        }
       }
+
+      @media(max-width: 520px) {
+        .won, .lost {
+          display: none;
+        }
+      }
+
+      @media(max-width: 320px) {
+        .matches {
+          display: none;
+        }
+      }
+
     }
   }
 }

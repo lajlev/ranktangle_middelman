@@ -1,0 +1,44 @@
+---
+title: Home
+---
+
+.row.tables
+  .twelve.columns
+    h1 League Table
+    table cellspacing="0"
+      tr
+        th
+        th.image
+        th.name Name
+        th Rating
+        th.matches Matches
+        th.won Won
+        th.lost Lost
+        th.ratio.has-tip title="Winning Ratio = matches won / matches" Ratio
+        th.last-match Last match
+      - 60.times do |num|
+        tr
+          td.rank
+            == prepend_zero(num+1)
+            |.
+          td.image
+            a href="/profile.html"
+              == image_tag lorem.image('54x54', :random_color => true, :text => ' ')
+          td.name
+            a href="/profile.html"
+              == lorem.name
+          td.rating
+            == random_number(800, 1999)
+          td.matches
+            == random_number(1, 200)
+          td.won
+            == random_number(1, 200)
+          td.lost
+            == random_number(1, 200)
+          td.ratio
+            == random_number(9, 99)
+            | %
+          td.last-match
+            a.has-tip title="Won with Luis Brady against Arturo Chandler & Bonita Zhang" href="/trustpilot-foosball-league/match/407.html"
+              == random_number(1, 99)
+              |  days ago
